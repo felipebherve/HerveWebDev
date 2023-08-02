@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Felipe Bruno Hervé: Study Space</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Titillium+Web:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
+    rel="stylesheet">
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Fonts -->
+
+</head>
+
+<body>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header -->
+  <header>
+    <div class="header-container">
+      <h1>The Digital Domain of Hervé</h1>
+    </div>
+  </header>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Navi bar -->
+  <navi class="navigationbar">
+    <ul class="navigationbaritens">
+      <li style="background-image: none; background-color:white;"><a style="color: rgba(6, 190, 0, 0.8)" href="#Intro">Home</a></li>
+      <li><a href="./Portifolio.html">Portfolio</a></li>
+      <li><a href="./Skills_And_Expertise.html">Skills and Expertise</a></li>
+      <li><a href="">Blog&Articles</a></li>
+      <li><a class="contact-button" onclick="openPopup()">Contact</a></li>
+    </ul>
+  </navi>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ body events -->
+
+  <section class="body">
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ intro -->
+    <div class="contentcontainer" id="intro">
+      <h2>About me:</h2>
+      <p> As I reflect on my journey in the realm of programming, I find myself humbled by the progress I've
+        made and inspired to continue growing. From the very beginning, I embraced the challenges of coding with an
+        unwavering determination to improve. Each line of code I write, every project I undertake, is an opportunity to
+        refine my skills and become better than I was before.</p>
+
+      <p>Through countless hours of learning and practice, I have come to appreciate the beauty of problem-solving
+        through
+        elegant and efficient code. The path has been both exhilarating and demanding, but it is the passion for
+        programming that has driven me forward. As I encounter new obstacles, I embrace them as stepping stones towards
+        mastery, always striving to exceed my previous capabilities.</p>
+
+      <p>In this ever-evolving field, I find solace in the fact that there will always be something new to learn and
+        explore. The constant evolution of technology keeps me on my toes and motivates me to stay curious and
+        adaptable.
+        I approach each project with an open mind and a desire to push the boundaries of my knowledge.</p>
+
+      <p>As I look ahead, I am excited about the opportunities that lie on the horizon. Whether it's mastering a new
+        language, diving deeper into web development, or exploring the world of artificial intelligence, I am committed
+        to
+        the pursuit of excellence. With each step, I hope to make a positive impact through my work and contribute
+        meaningfully to the ever-growing landscape of technology.</p>
+
+      <p>In conclusion, my journey in programming has been marked by humility and a relentless pursuit of improvement. I
+        am
+        eager to continue this adventure, embracing challenges, and pushing myself beyond my current limits. The goal is
+        simple yet profound: to be better today than I was yesterday and to make every line of code a testament to my
+        growth and dedication.</p>
+
+    </div>
+  
+
+
+  </section>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ footer -->
+
+  <footer class="footer"><h2>Turning ideas into reality</h2>
+  <br>
+  </footer>
+
+
+
+
+
+
+
+  <!-- script do botão de contat -->
+  <script>
+    function openPopup() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+  <!-- Popup do contato-->
+  <div id="popup" class="popup">
+   
+    <h3 style="font-weight: bald;">Contact-me</h3>
+    <div class="listiconsbackgroud">
+      <ul class="socialiconslist">
+        <li><a href="https://wa.me/5548998410099" target="_blank"><img
+              src="./Imagens/SocialIcons/green/whatsapp100px.png" alt="Call me on whatsapp"></a></li>
+        <li><a href="mailto:felipebherve@gmail.com"><img src="./Imagens/SocialIcons/green/email100px.png"
+              alt="Mail to me"></a></li>
+        <li><a href="https://ig.me/m/felipebherve/" target="_blank"><img
+              src="./Imagens/SocialIcons/green/instagram100px.png" alt="Talk to me on Instagram"></a></li>
+        <li><a href="https://www.linkedin.com/in/felipe-bruno-hervé-771338179" target="_blank"><img
+              src="./Imagens/SocialIcons/green/linkedin100px.png" alt=""></a></li>
+      </ul>
+    </div>
+    <span class="close-button" onclick="closePopup()">Back to Site</span>
+  </div>
+
+
+</body>
+
+
+
+</html>
