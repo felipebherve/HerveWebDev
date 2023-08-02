@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills and Expertise</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Titillium+Web:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Fonts -->
+
+</head>
+
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>The Digital Domain of Hervé</h1>
+        </div>
+    </header>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Navi bar -->
+    <navi class="navigationbar">
+        <ul class="navigationbaritens">
+            <li><a href="./index.html">Home</a></li>
+            <li> <a href="./Portifolio.html">Portfolio</a></li>
+            <li ><a href="./Skills_And_Expertise.html">Skills and Expertise</a></li>
+            <li style="background-image: none; background-color:white; "><a style="color: rgba(6, 190, 0, 0.8)"><a style="color: rgba(6, 190, 0, 0.8)" href="./Blog&Articles.html">Blog&Articles</a></li>
+            <li ><a class="contact-button" onclick="openPopup()">Contact</a></li>
+        </ul>
+    </navi>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ body events -->
+
+    <section class="body">
+
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ intro -->
+        <div class="contentcontainer" id="intro"></div>
+
+
+
+
+
+    </section>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ footer -->
+
+    <footer class="footer">
+        <h2>Turning ideas into reality</h2>
+        <br>
+    </footer>
+
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ botão de chat -->
+    <script>
+        function openPopup() {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+    <!-- Popup do contato-->
+    <div id="popup" class="popup">
+
+        <h3 style="font-weight: bald;">Contact-me</h3>
+        <div class="listiconsbackgroud">
+            <ul class="socialiconslist">
+                <li><a href="https://wa.me/5548998410099" target="_blank"><img
+                            src="./Imagens/SocialIcons/green/whatsapp100px.png" alt="Call me on whatsapp"></a></li>
+                <li><a href="mailto:felipebherve@gmail.com"><img src="./Imagens/SocialIcons/green/email100px.png"
+                            alt="Mail to me"></a></li>
+                <li><a href="https://ig.me/m/felipebherve/" target="_blank"><img
+                            src="./Imagens/SocialIcons/green/instagram100px.png" alt="Talk to me on Instagram"></a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/felipe-bruno-hervé-771338179" target="_blank"><img
+                            src="./Imagens/SocialIcons/green/linkedin100px.png" alt=""></a></li>
+            </ul>
+        </div>
+        <span class="close-button" onclick="closePopup()">Back to Site</span>
+    </div>
+
+
+
+</body>
+
+</html>

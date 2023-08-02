@@ -1,0 +1,291 @@
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ basic configs */
+html{
+  margin: 0;
+  padding: 0;
+  cursor: url("./Imagens/Cursor/cursorDefault.png"), default;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+html:hover{
+    cursor: url("./Imagens/Cursor/CursorHover.png"), default;
+}
+
+html, a, button{
+    cursor: url("./Imagens/Cursor/cursorAction.png"), default;
+}
+
+.close-button{ cursor: url("./Imagens/Cursor/cursorAction.png"), default; }
+
+a{
+  text-decoration: none;
+  color: white;
+}
+a:visited{
+  text-decoration: none;
+  color: white;
+}
+
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000; /* Fundo acizentado */
+
+  color: white;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ header */
+
+header {
+  /* background-image: url("./Imagens/Backgrounds/Black/Black_Brick_Wall_2.jpg"); */
+  background-image: url(./Imagens/Backgrounds/Black/Black_Leather.jpg);
+  /* background-image: url(./Imagens/Backgrounds/Black/Black_Wall_scrashes.jpg); */
+  background-size: cover;
+  border-radius: 20px 5px 20px 5px;
+  border-bottom: solid rgba(9, 255, 0, 0.8);
+  font-family: 'Pacifico', cursive;
+  
+
+  
+  padding: 20px;
+  text-align: center;
+}
+
+.header-container {
+  position: relative;
+  display: inline-block;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 36px;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(9, 255, 0, 0.8);
+  position: relative;
+}
+
+/* /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Navigation bar */
+.navigationbar{
+  margin: 10px 0px;
+  padding: 0px;
+  text-align: left;
+  font-family: 'Titillium Web', sans-serif;
+
+}
+
+.navigationbar ul{
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
+  
+}
+
+.navigationbaritens li{
+  background-image: url(./Imagens/Backgrounds/Green/Musgo.jpg);
+  background-size: cover;
+  margin: 0;
+  display: inline-block;
+  border: solid rgba(0, 255, 0, 0.8);
+  padding: 5px 10px 5px 10px;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(9, 255, 0, 0.8);
+  border-radius: 15px 5px 15px 5px;
+  background-color: black;
+  font-weight: bold;
+
+}
+
+.navigationbaritens li:hover{
+  transform: scale(1.4);
+  color: black;
+  /* background-image: url(./Imagens/Backgrounds/Green/Musgo\ claro.jpg); */
+  
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Boddy Project */
+
+.body{
+  text-align: center;
+  background-image: url("./Imagens/Backgrounds/Green/spacegreen.jpg");
+
+  background-size: auto;
+  background-attachment: scroll;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: 10px;
+  font-family: 'Titillium Web', sans-serif;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Container content */
+.contentcontainer{
+  border-radius: 20px;
+  background-color: #585555;
+  padding: 20px;
+  font-size: 18px;
+  margin: 20px 10px 40px 10px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.contentcontainer:hover{
+  text-shadow: 0 0 20px rgba(9, 255, 0, 0.8);
+}
+
+
+.contentcontainer h2{
+  color:rgba(9, 255, 0, 0.8);
+  margin: 0;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Lista de projetos */
+
+.listproject{
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.listproject ul{
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.listproject a{
+  text-decoration:underline;
+  color:rgba(9, 255, 0, 0.8);
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 10px;
+  font-weight: bold;
+  text-shadow: 0 0 20px rgba(9, 255, 0, 0.8);
+  
+}
+
+.listproject li{
+  list-style: none;
+}
+
+.listproject a:visited{
+  color: white;
+}
+
+.listproject a:hover{
+ color: yellow;
+
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ botão contatos */
+
+button .contact-button{
+  background-color: yellow;
+}
+
+  .popup {
+    width: 300px;
+    display: none;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 40px 10px 40px;
+    background-color: #000000;
+    border: 10px none;
+    border-radius:20px;
+    z-index: 999;
+    color: white;
+    margin: auto;
+    
+  }
+
+  .close-button{
+    display:flow-root;
+    background-color: rgba(9, 255, 0, 0.8);
+    padding: 10px;
+    margin: 20px 0px 0px 0px;
+    right: auto;
+    border: #000000;
+    box-sizing: border-box;
+    display: inline-block;
+    border-style: solid;
+    border-radius: 20px;
+    margin: 10px 0px 10px 0px;
+
+  }
+  .close-button:hover{
+    transform: scale(1.2);
+    background-color: white;
+    color:  rgba(6, 190, 0, 0.8);
+
+  }
+
+  .socialiconslist{
+    list-style-type: none;
+    display: inline-block;
+    border-style: solid;
+    border-color: rgba(9, 255, 0, 0.8);
+    border-radius: 20px;
+    box-sizing: border-box;
+    
+    padding: 0;
+    margin: 0;
+    margin: auto;
+  }
+  .listiconsbackgroud{
+    padding: 40x;
+  }
+
+  
+  .socialiconslist li{
+    display: inline-block;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .socialiconslist img:hover{
+    transform: scale(1.2);
+  }
+
+  .popup h3{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+    top: auto;
+    margin: 0px 0px 10px 0px;
+  }
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Botão */
+
+
+   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ footer */
+   .footer{
+    margin-top: 40px ;
+    bottom: auto;
+    background-image: url(./Imagens/Backgrounds/Black/Black_Leather.jpg);
+    background-size: cover;
+    border-radius: 20px 5px 20px 5px;
+    border-top: solid rgba(9, 255, 0, 0.8);
+    font-family: 'Pacifico', cursive;
+    height: 50px;   
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    display: block;   
+  }
+
+  .footer h2{
+    color: #ffffff;
+    font-size: 36px;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(9, 255, 0, 0.8);
+    position: relative;
+    box-sizing: border-box;
+       top: auto;
+       display: inline-block;
+       margin-bottom: 40px;
+  }
