@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 728px) {
+  header{background-color: #000000;}
+
+  .formContainer{float: none; align-content: center;}
+
+  section{text-align: center ;}
+
+  .description{margin-left: 0px; padding:40px;}
+
+  body{min-width: 500px}
+
+  .textbeforebutton{text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;}
+
+}
+
+
+@media (max-width: 655px){
+  
+}
+
+html{
+  font-family: 'Red Hat Mono', monospace;
+
+    cursor: url("./Imagens/mouse/mouse.png"), default;
+}
+html:active{
+    cursor: url("./Imagens/mouse/mouseclick.png"), default;
+}
+a:hover{
+  cursor: url("./Imagens/mouse/mousemegailuminati.png"), default;
+}
+.submited:hover{
+  cursor: url("./Imagens/mouse/mousemegailuminati.png"), default;
+  background-image: url(./Imagens/fire.jpg);
+  background-size: cover;
+  background-position: center;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("./Imagens/Stickers/GOD.png") ;
+    background-color: grey;
+}
+
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+
+header{
+    /* background-image: url("./Imagens/PasseataPublico/LQpublicpastafarianists.jpg");
+    background-size:contain; */
+    background-color: #000000;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding:20px;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+}
+
+
+#title{
+
+    font-size: 26px;
+    padding: 20px;
+}
+
+section{
+    padding: 20px;
+    background-image: url("./Imagens/PastafarismoPinturaHomemEDeusReverso.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.formContainer{
+    max-width: 230px;
+    background-color: #ffffffbb;
+    padding: 20px;
+    float: right;
+    margin: 20px;
+    
+
+}
+
+.mb{
+    margin-bottom: 15px;
+}
+
+
+h2{
+    font-size: 16px;
+    
+}
+
+input, select{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+
+}
+
+input[type="submit"]{
+    color: white;
+    background-color: #ff0000;
+    font-weight: bold;
+   
+}
+
+
+
+select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("./Imagens/mouse/mouseiluminati.png");
+    background-repeat: no-repeat;
+
+    background-position-y: center ;
+    
+    background-position-x: calc(100% - 10px);
+}
+
+.submited{
+
+    bottom: auto;
+
+}
+
+
+/* .toggle {
+    display: inline-block;
+    background-color: #ddd;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .option {
+    padding: 5px 15px;
+    border-radius: 20px;
+  }
+  
+  #off:checked ~ .option[for="off"],
+  #on:checked ~ .option[for="on"] {
+    background-color: #ff0000; /* Vermelho */
+    /* color: #fff;} */ 
+
+    /* Estilo geral do interruptor */
+
+
+.switch {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-style: bold;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Estilo das etiquetas dos botões */
+  .switch-label {
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Estilo dos botões */
+  .switch-label input[type="radio"] {
+    display: none;
+  }
+  
+  /* Estilo do controle deslizante (slider) do interruptor */
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: #ccc;
+    transition: 1.4s;
+  }
+  
+  /* Estilo do texto "On" e "Off" */
+  .label-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    height: 100%;
+    width: 40px;
+    border-radius: 20px;
+  }
+  
+  /* Estilo do controle deslizante (slider) quando o botão está selecionado */
+  .switch-label input[type="radio"]:checked + .slider {
+    background-color: #ff0000; /* Vermelho */
+  }
+  
+  /* Estilo do texto "On" e "Off" quando o botão está selecionado */
+  .switch-label input[type="radio"]:checked + .slider + .label-text {
+    color: #fff;
+  }
+
+  .textbeforebutton{
+    color: whitesmoke;
+    font-size: 19px;
+    font-weight: bold;
+
+    /* font-size: 24px;
+    font-weight: bold; */
+    /* text-shadow: 1px 1px 2px rgba(245, 0, 0, 0.644), -1px -1px 2px rgba(255, 0, 0, 0.726); */
+    text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000;
+  
+  }
+  
+  .textbeforebutton:hover{
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+  }
+
+footer{
+    background-color: #202121;
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+}
+  .maincelebrater{
+    max-height: 400px;
+
+   
+  }
+
+  .description{
+    display: inline-block;
+    color: white;
+    max-width: 40%;
+    margin-left: 40px;
+    text-align: left;
+    margin-bottom: 40px;
+
+  }
+
+  .description p, .description h3{
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+  }
+
+  .description h3{
+    font-size: 24px;
+  }
+
+  /* .mainsymbol{
+    max-height: 200px;
+    padding: 10px;
+  }
+
+  .QualitySymbol{
+   color: white;
+   display: inline-block;
+   font-size: 10px;
+   margin: 0px;
+   padding: 0px;
+   background-color: black;
+  } */
+
+  .allinclusiveheader{
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
+    font-size: 30px;
+    background-color: #000000;
+    background-image: none;
+    padding: 20px;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+
+  }
+
+  .contentallincluse{
+    background-image: url("./Imagens/pastafarismobroche.jpg");
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .contentallincluseimage{
+    display: inline-block;
+    margin: auto;
+  }
+
+  .textallincluse{
+    max-width: 1000px;
+    background-image: none;
+    text-align: center;
+
+    background-color: #202121;
+    color: white;
+    margin: auto;
+  }
+
+  .textallincluse h3{
+    font-size: 20px;
+    font-weight: bold;
+
+  } 
+
+  .textallincluse p{
+    font-size: 16px;
+    line-height: 24px;
+    margin: 5px 0px 5px 0px;
+  }
+
+
+.linkallinclusivegoback{
+  color: white;
+  text-decoration: none;
+  border: white;
+  border-style: solid;
+  padding: 10px;
+  margin: 20px;
+  display: inline-block;
+  border-radius: 10px 5px 10px 5px;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+  font-size: 18px;
+  font-weight: bold;
+}
+  
+
+.linkallinclusivegoback:hover{
+ background-color: black;
+ text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+ background-color: #ff0000;
+ 
+}
