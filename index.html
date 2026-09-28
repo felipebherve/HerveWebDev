@@ -15,6 +15,31 @@
     rel="stylesheet">
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Fonts -->
 
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
+  <script>
+    (function () {
+      var html = document.documentElement;
+      var stored = localStorage.getItem('herve-lang');
+      var lang = stored === 'pt' ? 'pt' : 'en';
+
+      function apply(l) {
+        html.setAttribute('data-lang', l);
+        html.lang = l === 'pt' ? 'pt-BR' : 'en';
+        var btn = document.getElementById('langToggle');
+        if (btn) btn.textContent = l === 'pt' ? 'EN' : 'PT';
+      }
+
+      apply(lang);
+
+      window.toggleLang = function () {
+        lang = lang === 'pt' ? 'en' : 'pt';
+        localStorage.setItem('herve-lang', lang);
+        apply(lang);
+      };
+    })();
+  </script>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
+
 </head>
 
 <body>
@@ -27,11 +52,12 @@
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Navi bar -->
   <navi class="navigationbar">
     <ul class="navigationbaritens">
-      <li style="background-image: none; background-color:white;"><a style="color: rgba(6, 190, 0, 0.8)" href="#Intro">Home</a></li>
-      <li><a href="./Portifolio.html">Portfolio</a></li>
-      <li><a href="./Skills_And_Expertise.html">Skills and Expertise</a></li>
-      <li><a href="">Blog&Articles</a></li>
-      <li><a class="contact-button" onclick="openPopup()">Contact</a></li>
+      <li style="background-image: none; background-color:white;"><a style="color: rgba(6, 190, 0, 0.8)" href="#Intro"><span class="lang-en">Home</span><span class="lang-pt">Início</span></a></li>
+      <li><a href="./Portifolio.html"><span class="lang-en">Portfolio</span><span class="lang-pt">Portfólio</span></a></li>
+      <li><a href="./Skills_And_Expertise.html"><span class="lang-en">Skills and Expertise</span><span class="lang-pt">Habilidades e Especialidades</span></a></li>
+      <li><a href="./Blog&Articles.html">Blog<span class="lang-en">&amp;Articles</span><span class="lang-pt">&amp;Artigos</span></a></li>
+      <li><a class="contact-button" onclick="openPopup()"><span class="lang-en">Contact</span><span class="lang-pt">Contato</span></a></li>
+      <li><button type="button" id="langToggle" class="lang-toggle-btn" onclick="toggleLang()">PT</button></li>
     </ul>
   </navi>
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ body events -->
@@ -41,37 +67,75 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ intro -->
     <div class="contentcontainer" id="intro">
-      <h2>About me:</h2>
-      <p> As I reflect on my journey in the realm of programming, I find myself humbled by the progress I've
-        made and inspired to continue growing. From the very beginning, I embraced the challenges of coding with an
-        unwavering determination to improve. Each line of code I write, every project I undertake, is an opportunity to
-        refine my skills and become better than I was before.</p>
 
-      <p>Through countless hours of learning and practice, I have come to appreciate the beauty of problem-solving
-        through
-        elegant and efficient code. The path has been both exhilarating and demanding, but it is the passion for
-        programming that has driven me forward. As I encounter new obstacles, I embrace them as stepping stones towards
-        mastery, always striving to exceed my previous capabilities.</p>
+      <div class="lang-en">
+        <h2>About me:</h2>
+        <p> As I reflect on my journey in the realm of programming, I find myself humbled by the progress I've
+          made and inspired to continue growing. From the very beginning, I embraced the challenges of coding with an
+          unwavering determination to improve. Each line of code I write, every project I undertake, is an opportunity to
+          refine my skills and become better than I was before.</p>
 
-      <p>In this ever-evolving field, I find solace in the fact that there will always be something new to learn and
-        explore. The constant evolution of technology keeps me on my toes and motivates me to stay curious and
-        adaptable.
-        I approach each project with an open mind and a desire to push the boundaries of my knowledge.</p>
+        <p>Through countless hours of learning and practice, I have come to appreciate the beauty of problem-solving
+          through
+          elegant and efficient code. The path has been both exhilarating and demanding, but it is the passion for
+          programming that has driven me forward. As I encounter new obstacles, I embrace them as stepping stones towards
+          mastery, always striving to exceed my previous capabilities.</p>
 
-      <p>As I look ahead, I am excited about the opportunities that lie on the horizon. Whether it's mastering a new
-        language, diving deeper into web development, or exploring the world of artificial intelligence, I am committed
-        to
-        the pursuit of excellence. With each step, I hope to make a positive impact through my work and contribute
-        meaningfully to the ever-growing landscape of technology.</p>
+        <p>In this ever-evolving field, I find solace in the fact that there will always be something new to learn and
+          explore. The constant evolution of technology keeps me on my toes and motivates me to stay curious and
+          adaptable.
+          I approach each project with an open mind and a desire to push the boundaries of my knowledge.</p>
 
-      <p>In conclusion, my journey in programming has been marked by humility and a relentless pursuit of improvement. I
-        am
-        eager to continue this adventure, embracing challenges, and pushing myself beyond my current limits. The goal is
-        simple yet profound: to be better today than I was yesterday and to make every line of code a testament to my
-        growth and dedication.</p>
+        <p>As I look ahead, I am excited about the opportunities that lie on the horizon. Whether it's mastering a new
+          language, diving deeper into web development, or exploring the world of artificial intelligence, I am committed
+          to
+          the pursuit of excellence. With each step, I hope to make a positive impact through my work and contribute
+          meaningfully to the ever-growing landscape of technology.</p>
+
+        <p>In conclusion, my journey in programming has been marked by humility and a relentless pursuit of improvement. I
+          am
+          eager to continue this adventure, embracing challenges, and pushing myself beyond my current limits. The goal is
+          simple yet profound: to be better today than I was yesterday and to make every line of code a testament to my
+          growth and dedication.</p>
+
+        <p>I come from years of experience in finance and accounting, and I'm now building a career in software
+          development. You can see everything I've studied and built so far on my <a href="https://github.com/felipebherve"
+            target="_blank" style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">GitHub</a>.</p>
+      </div>
+
+      <div class="lang-pt">
+        <h2>Sobre mim:</h2>
+        <p>Ao olhar para minha trajetória no mundo da programação, sinto-me humilde diante do progresso que já fiz e
+          inspirado a continuar crescendo. Desde o início, encarei os desafios de programar com uma determinação
+          constante de melhorar. Cada linha de código que escrevo, cada projeto que assumo, é uma oportunidade de
+          aprimorar minhas habilidades e ser melhor do que eu era antes.</p>
+
+        <p>Depois de muitas horas de estudo e prática, passei a apreciar a beleza de resolver problemas através de
+          código elegante e eficiente. O caminho tem sido tão exigente quanto empolgante, mas é a paixão pela
+          programação que me faz seguir em frente. A cada novo obstáculo, encaro como um degrau em direção ao domínio
+          do assunto, sempre buscando superar minhas capacidades anteriores.</p>
+
+        <p>Nesta área em constante evolução, encontro conforto no fato de que sempre haverá algo novo para aprender e
+          explorar. A evolução contínua da tecnologia me mantém atento e motivado a permanecer curioso e adaptável. Eu
+          encaro cada projeto com a mente aberta e o desejo de expandir meu conhecimento.</p>
+
+        <p>Olhando para frente, estou animado com as oportunidades no horizonte. Seja dominando uma nova linguagem,
+          me aprofundando em desenvolvimento web, ou explorando o mundo da inteligência artificial, estou comprometido
+          com a busca pela excelência. A cada passo, espero causar um impacto positivo através do meu trabalho e
+          contribuir de forma significativa para o cenário da tecnologia, que não para de crescer.</p>
+
+        <p>Em resumo, minha jornada na programação tem sido marcada pela humildade e por uma busca constante de
+          melhoria. Estou animado para continuar essa aventura, encarando desafios e me superando além dos meus
+          limites atuais. O objetivo é simples, mas profundo: ser melhor hoje do que fui ontem, e fazer de cada linha
+          de código um testemunho do meu crescimento e da minha dedicação.</p>
+
+        <p>Venho de anos de experiência na área financeira e contábil, e hoje estou construindo uma carreira em
+          desenvolvimento de software. Você pode ver tudo o que já estudei e construí no meu
+          <a href="https://github.com/felipebherve" target="_blank" style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">GitHub</a>.</p>
+      </div>
 
     </div>
-  
+
 
 
   </section>
@@ -100,7 +164,7 @@
   </script>
   <!-- Popup do contato-->
   <div id="popup" class="popup">
-   
+
     <h3 style="font-weight: bald;">Contact-me</h3>
     <div class="listiconsbackgroud">
       <ul class="socialiconslist">

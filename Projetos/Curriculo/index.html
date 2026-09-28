@@ -15,6 +15,31 @@
             <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
             <!-- fonte pega no google fonts -->
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
+            <script>
+                (function () {
+                    var html = document.documentElement;
+                    var stored = localStorage.getItem('herve-lang');
+                    var lang = stored === 'en' ? 'en' : 'pt';
+
+                    function apply(l) {
+                        html.setAttribute('data-lang', l);
+                        html.lang = l === 'pt' ? 'pt-BR' : 'en';
+                        var btn = document.getElementById('langToggle');
+                        if (btn) btn.textContent = l === 'pt' ? 'EN' : 'PT';
+                    }
+
+                    apply(lang);
+
+                    window.toggleLang = function () {
+                        lang = lang === 'pt' ? 'en' : 'pt';
+                        localStorage.setItem('herve-lang', lang);
+                        apply(lang);
+                    };
+                })();
+            </script>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
 </head>
 
 
@@ -25,91 +50,166 @@
     </div>
 
     <div>
-    <ul class="lista1"> 
-        <div class="botao1"><a class="link1" href="https://goo.gl/maps/BtibE4pPrAiUKFjz8" target="blank"> Florianópolis/SC</a> </div>  
+    <ul class="lista1">
+        <div class="botao1"><span class="link1" style="cursor: default;">Porto Alegre/RS</span></div>
         <div class="botao1"><a class="link1" href="https://wa.me/5548998410099 " target="blank">Watsapp</a> </div>
         <div class="botao1"><a class="link1" href="tel:48998410099" target="blank">(48)998410099</a> </div>
         <div class="botao1"><a class="link1" href="mailto:felipebherve@gmail.com" target="blank">felipebherve@gmail.com</a></div>
+        <div class="botao1"><a class="link1" href="https://github.com/felipebherve" target="blank">GitHub</a></div>
+        <div class="botao1"><button type="button" id="langToggle" class="link1 lang-toggle-btn" onclick="toggleLang()">EN</button></div>
     </ul>
     </div>
     <hr style="margin: 0px;">
 
-
-    <div>
-        <h3><b>Habilidades & Qualificações </b></h3>
-        <Ul>    
-                <li> Office (6 anos) </li>
-                <li>Sistema Conexos (1 ano) </li>
-                <li>Sistema SAGE folhamatic (4 anos) </li> 
-                <li>Sistema Domínio (1 ano) </li>
-                <li>Sistema Conta Azul (1 ano) </li>
-                <li>Inglês B1 (3 anos) </li>
-                <li>HTML Intermediário</li>
-                <li>CSS Intermediário</li>
-                <li>Java Iniciante</li>
-                <li>Pyton Iniciante</li>
-        </Ul> 
-
+    <div class="lang-pt">
+        <h3><b>Objetivo</b></h3>
+        <p class="texto">Busco uma posição júnior ou de estágio na área de desenvolvimento (Python/Django, back-end),
+            com disponibilidade para remoto, híbrido ou presencial em Porto Alegre/RS. Também tenho interesse em
+            vagas administrativas, financeiras ou de cobrança, áreas onde já tenho experiência comprovada.</p>
     </div>
-    
-    <div>
+    <div class="lang-en">
+        <h3><b>Objective</b></h3>
+        <p class="texto">Looking for a junior or internship position in development (Python/Django, backend), open
+            to remote, hybrid or on-site work in Porto Alegre, Brazil. Also interested in administrative, finance or
+            collections roles, areas where I already have proven experience.</p>
+    </div>
+
+    <div class="lang-pt">
+        <h3><b>Habilidades & Qualificações </b></h3>
+        <Ul>
+                <li>Python e Django (back-end, APIs REST)</li>
+                <li>JavaScript, HTML5 e CSS3</li>
+                <li>Java (fundamentos e orientação a objetos)</li>
+                <li>Git e GitHub</li>
+                <li>Pacote Office (6 anos)</li>
+                <li>Sistema Conexos (1 ano)</li>
+                <li>Sistema Sage Folhamatic (4 anos)</li>
+                <li>Sistema Domínio (1 ano)</li>
+                <li>Sistema Conta Azul (1 ano)</li>
+                <li>Inglês B1 (3 anos)</li>
+        </Ul>
+    </div>
+    <div class="lang-en">
+        <h3><b>Skills &amp; Qualifications </b></h3>
+        <Ul>
+                <li>Python and Django (backend, REST APIs)</li>
+                <li>JavaScript, HTML5 and CSS3</li>
+                <li>Java (fundamentals and object orientation)</li>
+                <li>Git and GitHub</li>
+                <li>Microsoft Office (6 years)</li>
+                <li>Conexos system (1 year)</li>
+                <li>Sage Folhamatic system (4 years)</li>
+                <li>Domínio system (1 year)</li>
+                <li>Conta Azul system (1 year)</li>
+                <li>English B1 (3 years)</li>
+        </Ul>
+    </div>
+
+    <div class="lang-pt">
+        <h3><b>Formação Acadêmica</b></h3>
+        <ul>
+            <li><b>Análise e Desenvolvimento de Sistemas</b> — UniRitter, EAD (cursando, desde 2026)</li>
+            <li><b>Curso de Backend com Python e Django</b> — IFRS em parceria com o Instituto Hardware (concluído em 2026)</li>
+            <li><b>Ciências Contábeis</b> — UFSC (cursado parcialmente)</li>
+            <li>Curso complementar: Introdução ao Linux (certificado)</li>
+        </ul>
+    </div>
+    <div class="lang-en">
+        <h3><b>Education</b></h3>
+        <ul>
+            <li><b>Systems Analysis and Development</b> — UniRitter, distance learning (in progress, since 2026)</li>
+            <li><b>Backend course in Python and Django</b> — IFRS, in partnership with Instituto Hardware (completed in 2026)</li>
+            <li><b>Accounting</b> — Federal University of Santa Catarina (UFSC), partially completed</li>
+            <li>Additional course: Introduction to Linux (certified)</li>
+        </ul>
+    </div>
+
+    <div class="lang-pt">
         <h3><b>Prazer em te conhecer!</b></h3>
         <p class="texto">
-                Olá, eu sou o Felipe, um daimon do conhecimento. Em minha vida busco aprender sempre e de forma criativa adaptando meu dia a dia.
-            Trabalhador desde cedo tive diversas mudanças desde cozinha até escritório. Iniciei a faculdade de Ciências contábeis para ter mais noção sobre empresas
-            e negócios pois com um pai engenheiro e uma mãe advogada tentei juntar o melhor de dois mundos, porém, nos meus últimos trabalhos tive a oportunidade de conhecer
-            a programação, tendo que reprogramar todo um sistema para uma empresa, nisso tive um insight que me levou a migrar meus conhecimentos para esta área. 
-
-            
+                Olá, eu sou o Felipe. Depois de anos atuando na área financeira e contábil, migrei minha carreira
+            para a programação. Comecei a estudar por conta própria em 2023 (HTML, CSS e JavaScript), completei um
+            curso de back-end com Python e Django pelo IFRS em parceria com o Instituto Hardware, e hoje curso
+            Análise e Desenvolvimento de Sistemas na UniRitter. Gosto de aprender de forma estruturada, sempre
+            documentando o que estudo — meus projetos e anotações estão publicados no meu GitHub.
         </p>
-
+    </div>
+    <div class="lang-en">
+        <h3><b>Nice to meet you!</b></h3>
+        <p class="texto">
+                Hi, I'm Felipe. After years working in finance and accounting, I moved my career into programming.
+            I started teaching myself HTML, CSS and JavaScript in 2023, completed a backend course in Python and
+            Django (IFRS, in partnership with Instituto Hardware), and I'm now studying Systems Analysis and
+            Development at UniRitter. I like to learn in a structured way and document what I study — my projects
+            and notes are published on my GitHub.
+        </p>
     </div>
 
-    <div>
+    <div class="lang-pt">
         <h3><b>Experiências</b></h3>
         <ul>
-            
+
             <li>
                 <b><a href="http://seger.com.br/nsite/" target="blank">Seger Importadora Exportadora S.A.</a>: </b> <br>
-                <i><b><sup> Pleno | Setembro 2016 – Dezembro 2019</sup></i></b>
-                <ul> 
-                 <li>Levantamento de contas a pagar/receber. </li> 
-                 <li>Envio/recebimento de documentos.</li> 
-                 <li>Emissão de relatórios de dívidas/devedores.</li> 
-                 <li>Emissão de documentos. </li>
-                 <li>Gerenciamento bancário. </li>
-                 <li> contábeis.</li>
-                </ul> 
+                <i><b><sup> Auxiliar Financeiro Pleno | Setembro 2016 – Fevereiro 2019</sup></b></i>
+                <ul>
+                 <li>Rotina financeira completa: conciliação bancária, contas a pagar/receber, emissão de notas e documentos.</li>
+                 <li>Liderei sozinho a migração do sistema financeiro (Sage Finmatic/Folhamatic) para o Conexos, incluindo contas, cadastros e automações.</li>
+                 <li>Emissão de relatórios de dívidas/devedores, gerenciamento bancário.</li>
+                 <li>Progressão interna: comecei como estagiário, fui efetivado e cheguei a Auxiliar Financeiro Pleno.</li>
+                </ul>
             </li>
-            
+
             <li>
-               
-                <b><a href="https://www.institutodocorretor.com.br/?gclid=Cj0KCQjwhsmaBhCvARIsAIbEbH4mX3yafGClvjynK8vW4Vuq7-HqvNQK1XSHv4ke8DKkkU_Fm0E-uHAaAhhwEALw_wcB" target="blank">CETER – Centro de Educação Tecnológica República | Florianópolis, Brasil </a></b>
-                <ul>    
-                    <b><i><sup>Auxiliar de cobrança | Janeiro 2016 – Setembro 2016</sup></i></b> 
-                    <li> Atendimento ao cliente.</li> 
-                    <li>Efetuação de cobranças.</li> 
-                    <li>Alimentação planilha de dívidas/devedores.</li> 
-                    <li>Verificação de balancetes e balanços.</li> 
-                    <li>Checagem de relatórios.</li>
-                </ul> 
+
+                <b><a href="https://www.institutodocorretor.com.br/?gclid=Cj0KCQjwhsmaBhCvARIsAIbEbH4mX3yafGClvjynK8vW4Vuq7-HqvNQK1XSHv4ke8DKkkU_Fm0E-uHAaAhhwEALw_wcB" target="blank">CETER – Centro de Educação Tecnológica República | São José/Florianópolis, Brasil </a></b>
+                <ul>
+                    <b><i><sup>Auxiliar de cobrança | Maio 2016 – Setembro 2016</sup></i></b>
+                    <li>Atendimento ao cliente e efetuação de cobranças.</li>
+                    <li>Identifiquei e corrigi inconsistências na cobrança deixadas pela gestão anterior, organizando um controle completo de valores e parcelas em planilha.</li>
+                    <li>Verificação de balancetes e balanços, checagem de relatórios.</li>
+                </ul>
             </li>
 
 
         </ul>
+        <p class="texto">Também atuei anteriormente em atendimento e operações (temakeria, restaurante japonês,
+            almoxarifado), onde desenvolvi organização, controle de estoque e atendimento ao cliente.</p>
+
+    </div>
+    <div class="lang-en">
+        <h3><b>Experience</b></h3>
+        <ul>
+
+            <li>
+                <b><a href="http://seger.com.br/nsite/" target="blank">Seger Importadora Exportadora S.A.</a>: </b> <br>
+                <i><b><sup> Mid-Level Financial Assistant | September 2016 – February 2019</sup></b></i>
+                <ul>
+                 <li>Full financial routine: bank reconciliation, accounts payable/receivable, invoicing and documentation.</li>
+                 <li>Led the migration of the financial system (Sage Finmatic/Folhamatic) to Conexos on my own, including accounts, records and automations.</li>
+                 <li>Debt and outstanding-balance reports, banking management.</li>
+                 <li>Internal progression: started as an intern, was hired, and reached Mid-Level Financial Assistant.</li>
+                </ul>
+            </li>
+
+            <li>
+
+                <b><a href="https://www.institutodocorretor.com.br/?gclid=Cj0KCQjwhsmaBhCvARIsAIbEbH4mX3yafGClvjynK8vW4Vuq7-HqvNQK1XSHv4ke8DKkkU_Fm0E-uHAaAhhwEALw_wcB" target="blank">CETER – Centro de Educação Tecnológica República | São José/Florianópolis, Brazil </a></b>
+                <ul>
+                    <b><i><sup>Collections Assistant | May 2016 – September 2016</sup></i></b>
+                    <li>Customer service and collections.</li>
+                    <li>Found and fixed collection inconsistencies left by the previous management, building a full spreadsheet control of amounts and installments.</li>
+                    <li>Checked trial balances, balance sheets and reports.</li>
+                </ul>
+            </li>
+
+
+        </ul>
+        <p class="texto">I also worked earlier in customer service and operations (a temaki restaurant, a Japanese
+            restaurant, a warehouse), where I built skills in organization, inventory control and customer
+            service.</p>
 
     </div>
 
-    <div>
-        <img src="" alt="">
-    </div>
-
-    
-
-
-
-
-
-    
 </body>
 </html>

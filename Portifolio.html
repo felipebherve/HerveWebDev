@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills and Expertise</title>
+    <title>Portfolio</title>
 
     <link rel="stylesheet" href="./style.css">
 
@@ -15,6 +15,31 @@
         href="https://fonts.googleapis.com/css2?family=Pacifico&family=Titillium+Web:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
         rel="stylesheet">
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Fonts -->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
+    <script>
+        (function () {
+            var html = document.documentElement;
+            var stored = localStorage.getItem('herve-lang');
+            var lang = stored === 'pt' ? 'pt' : 'en';
+
+            function apply(l) {
+                html.setAttribute('data-lang', l);
+                html.lang = l === 'pt' ? 'pt-BR' : 'en';
+                var btn = document.getElementById('langToggle');
+                if (btn) btn.textContent = l === 'pt' ? 'EN' : 'PT';
+            }
+
+            apply(lang);
+
+            window.toggleLang = function () {
+                lang = lang === 'pt' ? 'en' : 'pt';
+                localStorage.setItem('herve-lang', lang);
+                apply(lang);
+            };
+        })();
+    </script>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
 
 </head>
 
@@ -29,12 +54,13 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Navi bar -->
     <navi class="navigationbar">
         <ul class="navigationbaritens">
-            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html"><span class="lang-en">Home</span><span class="lang-pt">Início</span></a></li>
             <li style="background-image: none; background-color:white; "><a style="color: rgba(6, 190, 0, 0.8)"
-                    href="./Portifolio.html">Portfolio</a></li>
-            <li><a href="./Skills_And_Expertise.html">Skills and Expertise</a></li>
-            <li><a href="./Blog&Articles.html">Blog&Articles</a></li>
-            <li><a class="contact-button" onclick="openPopup()">Contact</a></li>
+                    href="./Portifolio.html"><span class="lang-en">Portfolio</span><span class="lang-pt">Portfólio</span></a></li>
+            <li><a href="./Skills_And_Expertise.html"><span class="lang-en">Skills and Expertise</span><span class="lang-pt">Habilidades e Especialidades</span></a></li>
+            <li><a href="./Blog&Articles.html">Blog<span class="lang-en">&amp;Articles</span><span class="lang-pt">&amp;Artigos</span></a></li>
+            <li><a class="contact-button" onclick="openPopup()"><span class="lang-en">Contact</span><span class="lang-pt">Contato</span></a></li>
+            <li><button type="button" id="langToggle" class="lang-toggle-btn" onclick="toggleLang()">PT</button></li>
         </ul>
     </navi>
 
@@ -44,25 +70,84 @@
 
         <div class="contentcontainer" id="projectlist">
 
-            <h2>Embark on a Digital Adventure: Discover My Web Portfolio</h2>
-            <p>Discover a captivating web portfolio featuring a diverse collection of custom-created websites that
-                exemplify
-                seamless functionality and captivating visuals. Witness the transformative power of web development and
-                design,
-                tailored to reflect your brand identity and unleash the boundless possibilities of the digital world.
-            </p>
+            <div class="lang-en">
+                <h2>Embark on a Digital Adventure: Discover My Web Portfolio</h2>
+                <p>Discover a captivating web portfolio featuring a diverse collection of custom-created websites that
+                    exemplify seamless functionality and captivating visuals. Witness the transformative power of web
+                    development and design, tailored to reflect your brand identity and unleash the boundless
+                    possibilities of the digital world.</p>
+            </div>
+            <div class="lang-pt">
+                <h2>Embarque em uma Aventura Digital: Conheça Meu Portfólio Web</h2>
+                <p>Conheça um portfólio web cativante, com uma coleção diversa de sites feitos sob medida que mostram
+                    funcionalidade impecável e visuais marcantes. Veja o poder transformador do desenvolvimento e do
+                    design web, moldado para refletir a identidade de uma marca e liberar as possibilidades
+                    infinitas do mundo digital.</p>
+            </div>
 
+            <div class="lang-en">
+                <h3>Web Projects</h3>
+            </div>
+            <div class="lang-pt">
+                <h3>Projetos Web</h3>
+            </div>
             <ul class="listproject">
-                <li><a href="./Projetos/Curriculo/index.html" target="_blank">Curriculum</a></li>
+                <li><a href="./Projetos/Curriculo/index.html" target="_blank"><span class="lang-en">Curriculum</span><span class="lang-pt">Currículo</span></a></li>
 <!--                 <li><a href="./Projetos/Página de Receitas/index.html" target="_blank">Recipe Page</a></li> If you see here, this is a gift -->
                 <li><a href="./Projetos/Site de Notícias/index.html" target="_blank">NewsSite</a></li>
-                <li><a href="./Projetos/Página de Captura/index.html" target="_blank">Mail Capture Page</a></li>
+                <li><a href="./Projetos/Página de Captura/index.html" target="_blank"><span class="lang-en">Mail Capture Page</span><span class="lang-pt">Página de Captura de E-mail</span></a></li>
             </ul>
-            <p>Continuously seeking new references and shaping my work with inspiration and ideas, my portfolio reflects
-                a journey of continuous growth and learning. Like a humble monk, I embrace each project as an
-                opportunity for evolution, guided by curiosity and a passion for innovative solutions. Join me on this
-                mindful path of constant improvement, where every step contributes to the art of web development and the
-                creation of meaningful digital experiences."</p>
+
+            <div class="lang-en">
+                <h3>Programming Studies &amp; Backend Projects</h3>
+                <p>Since 2026 I've also been studying backend development. These repositories, on my
+                    <a href="https://github.com/felipebherve" target="_blank"
+                        style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">GitHub</a>, hold the code,
+                    not a live demo page.</p>
+            </div>
+            <div class="lang-pt">
+                <h3>Estudos de Programação e Projetos de Backend</h3>
+                <p>Desde 2026 também estou estudando desenvolvimento backend. Esses repositórios, no meu
+                    <a href="https://github.com/felipebherve" target="_blank"
+                        style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">GitHub</a>, guardam o
+                    código, não uma página de demonstração.</p>
+            </div>
+            <ul class="listproject">
+                <li><a href="https://github.com/felipebherve/techtinga-api" target="_blank">techtinga-api</a>
+                    <span class="lang-en"> — final-challenge REST API for projects &amp; tasks</span>
+                    <span class="lang-pt"> — API REST do desafio final, de projetos e tarefas</span></li>
+                <li><a href="https://github.com/felipebherve/django-ifrs-estudos" target="_blank">django-ifrs-estudos</a>
+                    <span class="lang-en"> — backend course: notes and 4 Django projects</span>
+                    <span class="lang-pt"> — curso de backend: anotações e 4 projetos Django</span></li>
+                <li><a href="https://github.com/felipebherve/javascript-udemy-estudos" target="_blank">javascript-udemy-estudos</a>
+                    <span class="lang-en"> — JavaScript course notes and exercises</span>
+                    <span class="lang-pt"> — anotações e exercícios do curso de JavaScript</span></li>
+                <li><a href="https://github.com/felipebherve/calculadora-salario-liquido" target="_blank">calculadora-salario-liquido</a>
+                    <span class="lang-en"> — Brazilian net-salary calculator</span>
+                    <span class="lang-pt"> — calculadora de salário líquido</span></li>
+                <li><a href="https://github.com/felipebherve/java-uniritter-ads" target="_blank">java-uniritter-ads</a>
+                    <span class="lang-en"> — Java notes from my degree</span>
+                    <span class="lang-pt"> — anotações de Java da faculdade</span></li>
+                <li><a href="https://github.com/felipebherve/html-css-js-estudos" target="_blank">html-css-js-estudos</a>
+                    <span class="lang-en"> — where this site started, in 2023</span>
+                    <span class="lang-pt"> — onde este site começou, em 2023</span></li>
+            </ul>
+
+            <div class="lang-en">
+                <p>Continuously seeking new references and shaping my work with inspiration and ideas, my portfolio
+                    reflects a journey of continuous growth and learning. Like a humble monk, I embrace each project
+                    as an opportunity for evolution, guided by curiosity and a passion for innovative solutions. Join
+                    me on this mindful path of constant improvement, where every step contributes to the art of web
+                    development and the creation of meaningful digital experiences.</p>
+            </div>
+            <div class="lang-pt">
+                <p>Sempre em busca de novas referências e moldando meu trabalho com inspiração e ideias, meu
+                    portfólio reflete uma jornada de crescimento e aprendizado contínuos. Como um monge humilde,
+                    encaro cada projeto como uma oportunidade de evolução, guiado pela curiosidade e pela paixão por
+                    soluções inovadoras. Junte-se a mim nesse caminho consciente de melhoria constante, onde cada
+                    passo contribui para a arte do desenvolvimento web e para a criação de experiências digitais
+                    significativas.</p>
+            </div>
         </div>
     </section>
 
@@ -104,7 +189,7 @@
         </div>
         <span class="close-button" onclick="closePopup()">Back to Site</span>
     </div>
-  
+
 
 </body>
 

@@ -81,3 +81,22 @@ body{
     background-color: grey;
     color: white;
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma (EN/PT) */
+
+.lang-pt{
+    display: none;
+}
+
+html[data-lang="pt"] .lang-en{
+    display: none;
+}
+
+html[data-lang="pt"] .lang-pt{
+    display: revert;
+}
+
+.lang-toggle-btn{
+    font: inherit;
+    cursor: pointer;
+}

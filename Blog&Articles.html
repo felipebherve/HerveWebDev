@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills and Expertise</title>
+    <title>Blog &amp; Articles</title>
 
     <link rel="stylesheet" href="./style.css">
 
@@ -15,6 +15,31 @@
         href="https://fonts.googleapis.com/css2?family=Pacifico&family=Titillium+Web:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
         rel="stylesheet">
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Fonts -->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
+    <script>
+        (function () {
+            var html = document.documentElement;
+            var stored = localStorage.getItem('herve-lang');
+            var lang = stored === 'pt' ? 'pt' : 'en';
+
+            function apply(l) {
+                html.setAttribute('data-lang', l);
+                html.lang = l === 'pt' ? 'pt-BR' : 'en';
+                var btn = document.getElementById('langToggle');
+                if (btn) btn.textContent = l === 'pt' ? 'EN' : 'PT';
+            }
+
+            apply(lang);
+
+            window.toggleLang = function () {
+                lang = lang === 'pt' ? 'en' : 'pt';
+                localStorage.setItem('herve-lang', lang);
+                apply(lang);
+            };
+        })();
+    </script>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
 
 </head>
 
@@ -29,11 +54,12 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Navi bar -->
     <navi class="navigationbar">
         <ul class="navigationbaritens">
-            <li><a href="./index.html">Home</a></li>
-            <li> <a href="./Portifolio.html">Portfolio</a></li>
-            <li ><a href="./Skills_And_Expertise.html">Skills and Expertise</a></li>
-            <li style="background-image: none; background-color:white; "><a style="color: rgba(6, 190, 0, 0.8)"><a style="color: rgba(6, 190, 0, 0.8)" href="./Blog&Articles.html">Blog&Articles</a></li>
-            <li ><a class="contact-button" onclick="openPopup()">Contact</a></li>
+            <li><a href="./index.html"><span class="lang-en">Home</span><span class="lang-pt">Início</span></a></li>
+            <li><a href="./Portifolio.html"><span class="lang-en">Portfolio</span><span class="lang-pt">Portfólio</span></a></li>
+            <li><a href="./Skills_And_Expertise.html"><span class="lang-en">Skills and Expertise</span><span class="lang-pt">Habilidades e Especialidades</span></a></li>
+            <li style="background-image: none; background-color:white; "><a style="color: rgba(6, 190, 0, 0.8)" href="./Blog&Articles.html">Blog<span class="lang-en">&amp;Articles</span><span class="lang-pt">&amp;Artigos</span></a></li>
+            <li><a class="contact-button" onclick="openPopup()"><span class="lang-en">Contact</span><span class="lang-pt">Contato</span></a></li>
+            <li><button type="button" id="langToggle" class="lang-toggle-btn" onclick="toggleLang()">PT</button></li>
         </ul>
     </navi>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ body events -->
@@ -42,10 +68,89 @@
 
 
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ intro -->
-        <div class="contentcontainer" id="intro"></div>
+        <div class="contentcontainer" id="intro">
+            <div class="lang-en">
+                <h2>Blog &amp; Articles</h2>
+                <p>Short notes about my journey into programming and what I learn along the way.</p>
+            </div>
+            <div class="lang-pt">
+                <h2>Blog e Artigos</h2>
+                <p>Anotações curtas sobre minha jornada na programação e o que vou aprendendo pelo caminho.</p>
+            </div>
+        </div>
 
+        <div class="contentcontainer">
+            <div class="lang-en">
+                <h3>From Finance to Code</h3>
+                <p>I spent years working in finance and accounting: bank reconciliation, accounts payable and
+                    receivable, payroll, invoicing. At my last finance job I ended up leading a full migration of the
+                    company's financial system to a new platform, on my own. That's when I realized how much I
+                    enjoyed the problem-solving side of it, and I started teaching myself HTML, CSS and JavaScript in
+                    2023. I later completed a backend bootcamp in Python and Django, and I'm now studying Systems
+                    Analysis and Development. The finance background didn't go away — it's part of how I think about
+                    data and business rules today.</p>
+            </div>
+            <div class="lang-pt">
+                <h3>Da área financeira para o código</h3>
+                <p>Passei anos trabalhando na área financeira e contábil: conciliação bancária, contas a pagar e a
+                    receber, folha de pagamento, emissão de notas. No meu último emprego na área financeira acabei
+                    liderando sozinho a migração completa do sistema financeiro da empresa para uma nova plataforma.
+                    Foi aí que percebi o quanto gostava dessa parte de resolver problemas, e comecei a estudar HTML,
+                    CSS e JavaScript por conta própria em 2023. Depois concluí um bootcamp de backend em Python e
+                    Django, e hoje curso Análise e Desenvolvimento de Sistemas. A bagagem financeira não foi embora —
+                    ela faz parte de como eu penso dados e regras de negócio hoje.</p>
+            </div>
+        </div>
 
+        <div class="contentcontainer">
+            <div class="lang-en">
+                <h3>Building an API From a Written Spec</h3>
+                <p>The final challenge of my backend course was TechTinga: a written business brief describing a
+                    company that manages software projects and tasks, with no starter code. I had to model the data,
+                    validate the business rules, build a REST API, import a CSV file in bulk and generate a yearly
+                    report — all from that one document. I also wrote down what's still not working (token
+                    authentication isn't wired up yet, and part of the sample CSV gets rejected by validation rules I
+                    wrote on purpose). Being upfront about what's unfinished felt more useful than hiding it. See the
+                    project on <a href="https://github.com/felipebherve/techtinga-api" target="_blank"
+                        style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">GitHub</a>.</p>
+            </div>
+            <div class="lang-pt">
+                <h3>Construindo uma API a partir de um enunciado escrito</h3>
+                <p>O desafio final do meu curso de backend foi o TechTinga: um enunciado de negócio escrito
+                    descrevendo uma empresa que gerencia projetos e tarefas de software, sem nenhum código pronto.
+                    Tive que modelar os dados, validar as regras de negócio, construir uma API REST, importar um CSV
+                    em lote e gerar um relatório anual — tudo a partir daquele único documento. Também anotei o que
+                    ainda não funciona (a autenticação por token não está ligada, e parte do CSV de exemplo é
+                    rejeitada por regras de validação que eu mesmo escrevi de propósito). Ser transparente sobre o
+                    que está em aberto pareceu mais útil do que esconder. Veja o projeto no
+                    <a href="https://github.com/felipebherve/techtinga-api" target="_blank"
+                        style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">GitHub</a>.</p>
+            </div>
+        </div>
 
+        <div class="contentcontainer">
+            <div class="lang-en">
+                <h3>How I Study: Memograms and Small Steps</h3>
+                <p>I learn best by breaking things into small steps and writing my own notes as I go, instead of just
+                    watching a lesson pass by. Across my repositories you'll find dated lesson notes and
+                    "memograms" — small visual cards with a summary, an acronym, an example and "when to use" for a
+                    single concept, made right after I learn it. It's slower than just moving on to the next video,
+                    but it's how the concepts actually stick. My <a href="https://github.com/felipebherve"
+                        target="_blank" style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">GitHub
+                        profile</a> has the full map of what I've studied so far.</p>
+            </div>
+            <div class="lang-pt">
+                <h3>Como eu estudo: memogramas e passos pequenos</h3>
+                <p>Aprendo melhor dividindo tudo em passos pequenos e escrevendo minhas próprias anotações ao longo
+                    do caminho, em vez de só assistir a aula passar. Pelos meus repositórios você vai encontrar
+                    anotações de aula datadas e "memogramas" — pequenos cartões visuais com um resumo, um acrônimo,
+                    um exemplo e "quando usar" para um único conceito, feitos logo depois de eu aprender. É mais
+                    lento do que simplesmente seguir para o próximo vídeo, mas é assim que o conteúdo realmente fica.
+                    Meu <a href="https://github.com/felipebherve" target="_blank"
+                        style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">perfil no GitHub</a> tem o
+                    mapa completo do que já estudei até agora.</p>
+            </div>
+        </div>
 
 
     </section>

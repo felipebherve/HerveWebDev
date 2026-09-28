@@ -16,6 +16,31 @@
         rel="stylesheet">
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Fonts -->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
+    <script>
+        (function () {
+            var html = document.documentElement;
+            var stored = localStorage.getItem('herve-lang');
+            var lang = stored === 'pt' ? 'pt' : 'en';
+
+            function apply(l) {
+                html.setAttribute('data-lang', l);
+                html.lang = l === 'pt' ? 'pt-BR' : 'en';
+                var btn = document.getElementById('langToggle');
+                if (btn) btn.textContent = l === 'pt' ? 'EN' : 'PT';
+            }
+
+            apply(lang);
+
+            window.toggleLang = function () {
+                lang = lang === 'pt' ? 'en' : 'pt';
+                localStorage.setItem('herve-lang', lang);
+                apply(lang);
+            };
+        })();
+    </script>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
+
 </head>
 
 
@@ -29,12 +54,13 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Navi bar -->
     <navi class="navigationbar">
         <ul class="navigationbaritens">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./Portifolio.html">Portfolio</a></li>
+            <li><a href="./index.html"><span class="lang-en">Home</span><span class="lang-pt">Início</span></a></li>
+            <li><a href="./Portifolio.html"><span class="lang-en">Portfolio</span><span class="lang-pt">Portfólio</span></a></li>
             <li style="background-image: none; background-color:white; "><a style="color: rgba(6, 190, 0, 0.8)"
-                    href="./Skills_And_Expertise.html">Skills and Expertise</a></li>
-            <li><a href="./Blog&Articles.html">Blog&Articles</a></li>
-            <li><a class="contact-button" onclick="openPopup()">Contact</a></li>
+                    href="./Skills_And_Expertise.html"><span class="lang-en">Skills and Expertise</span><span class="lang-pt">Habilidades e Especialidades</span></a></li>
+            <li><a href="./Blog&Articles.html">Blog<span class="lang-en">&amp;Articles</span><span class="lang-pt">&amp;Artigos</span></a></li>
+            <li><a class="contact-button" onclick="openPopup()"><span class="lang-en">Contact</span><span class="lang-pt">Contato</span></a></li>
+            <li><button type="button" id="langToggle" class="lang-toggle-btn" onclick="toggleLang()">PT</button></li>
         </ul>
     </navi>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ body events -->
@@ -43,11 +69,157 @@
 
 
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ intro -->
-        <div class="contentcontainer" id="intro"></div>
+        <div class="contentcontainer" id="intro">
 
+            <div class="lang-en">
+                <h2>Skills and Expertise</h2>
+                <p>I'm changing careers from finance and accounting into software development. Below is what I can
+                    actually do today, grouped by area — with links to the repositories where you can see it in
+                    practice, on my <a href="https://github.com/felipebherve" target="_blank"
+                        style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">GitHub</a>.</p>
+            </div>
+            <div class="lang-pt">
+                <h2>Habilidades e Especialidades</h2>
+                <p>Estou migrando de carreira: saindo da área financeira e contábil para o desenvolvimento de
+                    software. Abaixo está o que eu realmente sei fazer hoje, agrupado por área — com links para os
+                    repositórios onde dá para ver isso na prática, no meu <a href="https://github.com/felipebherve"
+                        target="_blank" style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">GitHub</a>.</p>
+            </div>
 
+        </div>
 
+        <div class="contentcontainer">
+            <div class="lang-en">
+                <h2>Programming &amp; Development</h2>
+                <ul>
+                    <li><b>Python &amp; Django</b> — backend, models, migrations, admin and REST APIs with Django REST
+                        Framework. Built after completing a full backend bootcamp (IFRS + Instituto Hardware) — see
+                        <a href="https://github.com/felipebherve/django-ifrs-estudos" target="_blank"
+                            style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">django-ifrs-estudos</a>
+                        and <a href="https://github.com/felipebherve/techtinga-api" target="_blank"
+                            style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">techtinga-api</a>.</li>
+                    <li><b>JavaScript</b> — variables, control flow, functions, closures, factory functions and the
+                        basics of object orientation, from a full Udemy course — see
+                        <a href="https://github.com/felipebherve/javascript-udemy-estudos" target="_blank"
+                            style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">javascript-udemy-estudos</a>.
+                    </li>
+                    <li><b>HTML5 &amp; CSS3</b> — page structure, forms, layout and styling, self-taught since 2023 —
+                        see <a href="https://github.com/felipebherve/html-css-js-estudos" target="_blank"
+                            style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">html-css-js-estudos</a>,
+                        the site you're on right now, and this whole page.</li>
+                    <li><b>Java</b> — logic, OOP fundamentals (classes, objects, encapsulation, inheritance), from my
+                        degree — see <a href="https://github.com/felipebherve/java-uniritter-ads" target="_blank"
+                            style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">java-uniritter-ads</a>.
+                    </li>
+                    <li><b>Git &amp; GitHub</b> — version control, commits, branches and publishing repositories, used
+                        across every project above.</li>
+                </ul>
+            </div>
+            <div class="lang-pt">
+                <h2>Programação e Desenvolvimento</h2>
+                <ul>
+                    <li><b>Python e Django</b> — backend, models, migrações, admin e APIs REST com Django REST
+                        Framework. Construído depois de concluir um bootcamp de backend completo (IFRS + Instituto
+                        Hardware) — veja
+                        <a href="https://github.com/felipebherve/django-ifrs-estudos" target="_blank"
+                            style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">django-ifrs-estudos</a>
+                        e <a href="https://github.com/felipebherve/techtinga-api" target="_blank"
+                            style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">techtinga-api</a>.</li>
+                    <li><b>JavaScript</b> — variáveis, controle de fluxo, funções, closures, funções factory e o
+                        básico de orientação a objetos, de um curso completo da Udemy — veja
+                        <a href="https://github.com/felipebherve/javascript-udemy-estudos" target="_blank"
+                            style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">javascript-udemy-estudos</a>.
+                    </li>
+                    <li><b>HTML5 e CSS3</b> — estrutura de página, formulários, layout e estilização, autodidata
+                        desde 2023 — veja
+                        <a href="https://github.com/felipebherve/html-css-js-estudos" target="_blank"
+                            style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">html-css-js-estudos</a>,
+                        o próprio site em que você está agora, e esta página.</li>
+                    <li><b>Java</b> — lógica, fundamentos de POO (classes, objetos, encapsulamento, herança), da minha
+                        faculdade — veja
+                        <a href="https://github.com/felipebherve/java-uniritter-ads" target="_blank"
+                            style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">java-uniritter-ads</a>.
+                    </li>
+                    <li><b>Git e GitHub</b> — controle de versão, commits, branches e publicação de repositórios,
+                        usado em todos os projetos acima.</li>
+                </ul>
+            </div>
+        </div>
 
+        <div class="contentcontainer">
+            <div class="lang-en">
+                <h2>Tools</h2>
+                <ul>
+                    <li>VS Code and PyCharm</li>
+                    <li>SQLite (used in every Django project above)</li>
+                    <li>Command line / terminal</li>
+                    <li>Linux basics (certified)</li>
+                </ul>
+            </div>
+            <div class="lang-pt">
+                <h2>Ferramentas</h2>
+                <ul>
+                    <li>VS Code e PyCharm</li>
+                    <li>SQLite (usado em todos os projetos Django acima)</li>
+                    <li>Linha de comando / terminal</li>
+                    <li>Linux básico (certificado)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contentcontainer">
+            <div class="lang-en">
+                <h2>Finance &amp; Business Background</h2>
+                <p>Years of hands-on experience before programming, which I bring into how I model data and
+                    validation rules:</p>
+                <ul>
+                    <li>Bank and accounting reconciliation, accounts payable and receivable, invoicing, payroll</li>
+                    <li>Led a full system migration on my own (Sage Finmatic/Folhamatic → Conexos)</li>
+                    <li>Microsoft Office (6 years); the Conexos, Sage Folhamatic, Domínio and Conta Azul systems</li>
+                </ul>
+            </div>
+            <div class="lang-pt">
+                <h2>Base Financeira e Administrativa</h2>
+                <p>Anos de experiência prática antes da programação, que trago para como modelo dados e regras de
+                    validação:</p>
+                <ul>
+                    <li>Conciliação bancária e contábil, contas a pagar e a receber, emissão de notas, folha de
+                        pagamento</li>
+                    <li>Liderei sozinho uma migração completa de sistema (Sage Finmatic/Folhamatic → Conexos)</li>
+                    <li>Pacote Office (6 anos); sistemas Conexos, Sage Folhamatic, Domínio e Conta Azul</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contentcontainer">
+            <div class="lang-en">
+                <h2>How I Work</h2>
+                <ul>
+                    <li>I learn by breaking things into small steps and writing my own notes as I go — you'll see
+                        dated lesson notes and "memograms" (visual memory cards) across my repositories.</li>
+                    <li>I document what I build, including what's still unfinished — see the "known limitations"
+                        section in <a href="https://github.com/felipebherve/techtinga-api" target="_blank"
+                            style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">techtinga-api</a>.</li>
+                    <li>Track record of spotting and fixing operational problems: I found billing inconsistencies
+                        left by a previous employee and rebuilt the control spreadsheet from scratch.</li>
+                    <li>Languages: Portuguese (native), English (B1)</li>
+                </ul>
+            </div>
+            <div class="lang-pt">
+                <h2>Como Eu Trabalho</h2>
+                <ul>
+                    <li>Aprendo dividindo tudo em passos pequenos e escrevendo minhas próprias anotações ao longo do
+                        caminho — você vai ver anotações de aula datadas e "memogramas" (cartões visuais de memória)
+                        pelos meus repositórios.</li>
+                    <li>Documento o que construo, incluindo o que ainda está em aberto — veja a seção "limitações
+                        conhecidas" do <a href="https://github.com/felipebherve/techtinga-api" target="_blank"
+                            style="color: rgba(9, 255, 0, 0.8); text-decoration: underline;">techtinga-api</a>.</li>
+                    <li>Histórico de identificar e corrigir problemas operacionais: encontrei inconsistências de
+                        cobrança deixadas por um funcionário anterior e reconstruí o controle do zero.</li>
+                    <li>Idiomas: Português (nativo), Inglês (B1)</li>
+                </ul>
+            </div>
+        </div>
 
 
     </section>
@@ -90,7 +262,7 @@
         </div>
         <span class="close-button" onclick="closePopup()">Back to Site</span>
     </div>
-  
+
 
 </body>
 
