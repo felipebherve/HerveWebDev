@@ -21,6 +21,7 @@ My first published project, made in **2023** during my self-taught HTML and CSS 
 | `Projetos/Curriculo` | My résumé as a web page, with a PDF version |
 | `Projetos/Página de Captura` | A landing-page exercise ("AllInclusive" and a second page) |
 | `Projetos/Página de Receitas` | A recipes page |
+| `Projetos/Site de Notícias` | A news site page |
 
 ## What I learned
 

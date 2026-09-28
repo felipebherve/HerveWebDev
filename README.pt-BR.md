@@ -21,6 +21,7 @@ Meu primeiro projeto publicado, feito em **2023** durante a etapa autodidata de 
 | `Projetos/Curriculo` | Meu currículo como página web, com versão em PDF |
 | `Projetos/Página de Captura` | Um exercício de página de captura ("AllInclusive" e uma segunda página) |
 | `Projetos/Página de Receitas` | Uma página de receitas |
+| `Projetos/Site de Notícias` | Uma página de site de notícias |
 
 ## O que aprendi
 
