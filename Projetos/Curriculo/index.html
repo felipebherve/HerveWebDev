@@ -5,211 +5,320 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felipe Bruno Hervé</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Felipe Bruno Hervé — Currículo</title>
+    <meta name="description" content="Currículo de Felipe Bruno Hervé: desenvolvedor em formação, Python, Django e JavaScript.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-            <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet"> -->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-            <!-- fonte pega no google fonts -->
+    <link rel="stylesheet" href="./style.css">
 
-            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
-            <script>
-                (function () {
-                    var html = document.documentElement;
-                    var stored = localStorage.getItem('herve-lang');
-                    var lang = stored === 'en' ? 'en' : 'pt';
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
+    <script>
+        (function () {
+            var html = document.documentElement;
+            var stored = localStorage.getItem('herve-lang');
+            var lang = stored === 'en' ? 'en' : 'pt';
 
-                    function apply(l) {
-                        html.setAttribute('data-lang', l);
-                        html.lang = l === 'pt' ? 'pt-BR' : 'en';
-                        var btn = document.getElementById('langToggle');
-                        if (btn) btn.textContent = l === 'pt' ? 'EN' : 'PT';
-                    }
+            function apply(l) {
+                html.setAttribute('data-lang', l);
+                html.lang = l === 'pt' ? 'pt-BR' : 'en';
+                var btn = document.getElementById('langToggle');
+                if (btn) btn.textContent = l === 'pt' ? 'EN' : 'PT';
+            }
 
-                    apply(lang);
+            apply(lang);
 
-                    window.toggleLang = function () {
-                        lang = lang === 'pt' ? 'en' : 'pt';
-                        localStorage.setItem('herve-lang', lang);
-                        apply(lang);
-                    };
-                })();
-            </script>
-            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
+            window.toggleLang = function () {
+                lang = lang === 'pt' ? 'en' : 'pt';
+                localStorage.setItem('herve-lang', lang);
+                apply(lang);
+            };
+        })();
+    </script>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma -->
 </head>
 
 
 <body>
+    <div class="page">
 
-    <div>
-         <h1><strong>Felipe Bruno Hervé</strong></h1>
-    </div>
+        <a class="back-link" href="https://felipebherve.github.io/">
+            <span class="lang-pt">← portfólio</span><span class="lang-en">← portfolio</span>
+        </a>
 
-    <div>
-    <ul class="lista1">
-        <div class="botao1"><span class="link1" style="cursor: default;">Porto Alegre/RS</span></div>
-        <div class="botao1"><a class="link1" href="https://wa.me/5548998410099 " target="blank">Watsapp</a> </div>
-        <div class="botao1"><a class="link1" href="tel:48998410099" target="blank">(48)998410099</a> </div>
-        <div class="botao1"><a class="link1" href="mailto:felipebherve@gmail.com" target="blank">felipebherve@gmail.com</a></div>
-        <div class="botao1"><a class="link1" href="https://github.com/felipebherve" target="blank">GitHub</a></div>
-        <div class="botao1"><button type="button" id="langToggle" class="link1 lang-toggle-btn" onclick="toggleLang()">EN</button></div>
-    </ul>
-    </div>
-    <hr style="margin: 0px;">
+        <div>
+            <h1>Felipe Bruno Hervé</h1>
+            <p class="tagline lang-pt">Desenvolvedor(a) Jr em formação · Python · Django · JavaScript</p>
+            <p class="tagline lang-en">Junior Developer in the making · Python · Django · JavaScript</p>
+        </div>
 
-    <div class="lang-pt">
-        <h3><b>Objetivo</b></h3>
-        <p class="texto">Busco uma posição júnior ou de estágio na área de desenvolvimento (Python/Django, back-end),
-            com disponibilidade para remoto, híbrido ou presencial em Porto Alegre/RS. Também tenho interesse em
-            vagas administrativas, financeiras ou de cobrança, áreas onde já tenho experiência comprovada.</p>
-    </div>
-    <div class="lang-en">
-        <h3><b>Objective</b></h3>
-        <p class="texto">Looking for a junior or internship position in development (Python/Django, backend), open
-            to remote, hybrid or on-site work in Porto Alegre, Brazil. Also interested in administrative, finance or
-            collections roles, areas where I already have proven experience.</p>
-    </div>
-
-    <div class="lang-pt">
-        <h3><b>Habilidades & Qualificações </b></h3>
-        <Ul>
-                <li>Python e Django (back-end, APIs REST)</li>
-                <li>JavaScript, HTML5 e CSS3</li>
-                <li>Java (fundamentos e orientação a objetos)</li>
-                <li>Git e GitHub</li>
-                <li>Pacote Office (6 anos)</li>
-                <li>Sistema Conexos (1 ano)</li>
-                <li>Sistema Sage Folhamatic (4 anos)</li>
-                <li>Sistema Domínio (1 ano)</li>
-                <li>Sistema Conta Azul (1 ano)</li>
-                <li>Inglês B1 (3 anos)</li>
-        </Ul>
-    </div>
-    <div class="lang-en">
-        <h3><b>Skills &amp; Qualifications </b></h3>
-        <Ul>
-                <li>Python and Django (backend, REST APIs)</li>
-                <li>JavaScript, HTML5 and CSS3</li>
-                <li>Java (fundamentals and object orientation)</li>
-                <li>Git and GitHub</li>
-                <li>Microsoft Office (6 years)</li>
-                <li>Conexos system (1 year)</li>
-                <li>Sage Folhamatic system (4 years)</li>
-                <li>Domínio system (1 year)</li>
-                <li>Conta Azul system (1 year)</li>
-                <li>English B1 (3 years)</li>
-        </Ul>
-    </div>
-
-    <div class="lang-pt">
-        <h3><b>Formação Acadêmica</b></h3>
-        <ul>
-            <li><b>Análise e Desenvolvimento de Sistemas</b> — UniRitter, EAD (cursando, desde 2026)</li>
-            <li><b>Curso de Backend com Python e Django</b> — IFRS em parceria com o Instituto Hardware (concluído em 2026)</li>
-            <li><b>Ciências Contábeis</b> — UFSC (cursado parcialmente)</li>
-            <li>Curso complementar: Introdução ao Linux (certificado)</li>
+        <ul class="lista1">
+            <li class="botao1"><span class="link1" style="cursor: default;">Porto Alegre/RS</span></li>
+            <li class="botao1"><a class="link1" href="https://wa.me/5548998410099" target="_blank">WhatsApp</a></li>
+            <li class="botao1"><a class="link1" href="tel:+5548998410099">(48) 99841-0099</a></li>
+            <li class="botao1"><a class="link1" href="mailto:felipebherve@gmail.com">felipebherve@gmail.com</a></li>
+            <li class="botao1"><a class="link1" href="https://github.com/felipebherve" target="_blank">GitHub</a></li>
+            <li class="botao1"><a class="link1" href="https://www.linkedin.com/in/felipe-bruno-hervé-771338179" target="_blank">LinkedIn</a></li>
+            <li class="botao1"><a class="link1" href="https://felipebherve.github.io/" target="_blank"><span class="lang-pt">Portfólio</span><span class="lang-en">Portfolio</span></a></li>
+            <li class="botao1"><button type="button" id="langToggle" class="link1 lang-toggle-btn" onclick="toggleLang()">EN</button></li>
         </ul>
-    </div>
-    <div class="lang-en">
-        <h3><b>Education</b></h3>
-        <ul>
-            <li><b>Systems Analysis and Development</b> — UniRitter, distance learning (in progress, since 2026)</li>
-            <li><b>Backend course in Python and Django</b> — IFRS, in partnership with Instituto Hardware (completed in 2026)</li>
-            <li><b>Accounting</b> — Federal University of Santa Catarina (UFSC), partially completed</li>
-            <li>Additional course: Introduction to Linux (certified)</li>
-        </ul>
-    </div>
 
-    <div class="lang-pt">
-        <h3><b>Prazer em te conhecer!</b></h3>
-        <p class="texto">
-                Olá, eu sou o Felipe. Depois de anos atuando na área financeira e contábil, migrei minha carreira
-            para a programação. Comecei a estudar por conta própria em 2023 (HTML, CSS e JavaScript), completei um
-            curso de back-end com Python e Django pelo IFRS em parceria com o Instituto Hardware, e hoje curso
-            Análise e Desenvolvimento de Sistemas na UniRitter. Gosto de aprender de forma estruturada, sempre
-            documentando o que estudo — meus projetos e anotações estão publicados no meu GitHub.
-        </p>
-    </div>
-    <div class="lang-en">
-        <h3><b>Nice to meet you!</b></h3>
-        <p class="texto">
-                Hi, I'm Felipe. After years working in finance and accounting, I moved my career into programming.
-            I started teaching myself HTML, CSS and JavaScript in 2023, completed a backend course in Python and
-            Django (IFRS, in partnership with Instituto Hardware), and I'm now studying Systems Analysis and
-            Development at UniRitter. I like to learn in a structured way and document what I study — my projects
-            and notes are published on my GitHub.
-        </p>
-    </div>
+        <hr>
 
-    <div class="lang-pt">
-        <h3><b>Experiências</b></h3>
-        <ul>
+        <section id="objetivo">
+            <h2 class="lang-pt">Objetivo</h2>
+            <h2 class="lang-en">Objective</h2>
+            <p class="texto lang-pt">Atuar como Desenvolvedor(a) Jr ou estagiário(a) em Programação, aplicando
+                Python, Django, JavaScript, HTML e CSS na construção e manutenção de sistemas — remoto, híbrido ou
+                presencial em Porto Alegre/RS. Também aberto a oportunidades administrativas, financeiras ou de
+                cobrança, área em que já tenho experiência comprovada.</p>
+            <p class="texto lang-en">Looking for a Junior Developer or internship role in Programming, applying
+                Python, Django, JavaScript, HTML and CSS to build and maintain systems — remote, hybrid or on-site
+                in Porto Alegre, Brazil. Also open to administrative, finance or collections roles, an area where I
+                already have proven experience.</p>
+        </section>
 
-            <li>
-                <b><a href="http://seger.com.br/nsite/" target="blank">Seger Importadora Exportadora S.A.</a>: </b> <br>
-                <i><b><sup> Auxiliar Financeiro Pleno | Setembro 2016 – Fevereiro 2019</sup></b></i>
-                <ul>
-                 <li>Rotina financeira completa: conciliação bancária, contas a pagar/receber, emissão de notas e documentos.</li>
-                 <li>Liderei sozinho a migração do sistema financeiro (Sage Finmatic/Folhamatic) para o Conexos, incluindo contas, cadastros e automações.</li>
-                 <li>Emissão de relatórios de dívidas/devedores, gerenciamento bancário.</li>
-                 <li>Progressão interna: comecei como estagiário, fui efetivado e cheguei a Auxiliar Financeiro Pleno.</li>
+        <section id="resumo">
+            <h2 class="lang-pt">Resumo Profissional</h2>
+            <h2 class="lang-en">Professional Summary</h2>
+            <p class="texto lang-pt">Estudante de Análise e Desenvolvimento de Sistemas (UniRitter), com bootcamp
+                de backend em Python e Django concluído (IFRS + Instituto Hardware, mais de 150 exercícios
+                práticos) e mais de dois anos de estudo autodidata em desenvolvimento web. Antes de migrar para
+                tecnologia, atuou mais de três anos em rotinas financeiras e contábeis — experiência que trouxe
+                raciocínio analítico, atenção a detalhes e histórico de identificar e corrigir falhas em processos,
+                como a reestruturação do controle de cobrança na CETER e a condução da migração de sistema
+                financeiro na Seger.</p>
+            <p class="texto lang-en">Systems Analysis and Development student (UniRitter), with a completed
+                backend bootcamp in Python and Django (IFRS + Instituto Hardware, 150+ hands-on exercises) and
+                over two years of self-taught web development. Before moving into tech, I spent more than three
+                years in finance and accounting routines — experience that brought analytical thinking, attention
+                to detail, and a track record of finding and fixing process issues, such as rebuilding the
+                collections control at CETER and leading the financial-system migration at Seger.</p>
+        </section>
+
+        <section id="formacao">
+            <h2 class="lang-pt">Formação</h2>
+            <h2 class="lang-en">Education</h2>
+
+            <div class="edu-item">
+                <div class="degree lang-pt">Análise e Desenvolvimento de Sistemas</div>
+                <div class="degree lang-en">Systems Analysis and Development</div>
+                <div class="org">UniRitter — <span class="lang-pt">EAD</span><span class="lang-en">distance learning</span> ·
+                    <span class="status lang-pt">cursando, desde 2026</span><span class="status lang-en">in progress, since 2026</span></div>
+            </div>
+            <div class="edu-item">
+                <div class="degree lang-pt">Bootcamp Backend com Python e Django</div>
+                <div class="degree lang-en">Backend Bootcamp in Python and Django</div>
+                <div class="org">IFRS + Instituto Hardware ·
+                    <span class="status lang-pt">concluído em 2026</span><span class="status lang-en">completed in 2026</span></div>
+            </div>
+            <div class="edu-item">
+                <div class="degree lang-pt">Bacharelado em Ciências Contábeis</div>
+                <div class="degree lang-en">Accounting (Bachelor's)</div>
+                <div class="org">UFSC ·
+                    <span class="status lang-pt">cursado até o 7º semestre, trancado</span><span class="status lang-en">completed through the 7th semester, on hold</span></div>
+            </div>
+            <div class="edu-item">
+                <div class="degree lang-pt">Curso complementar: Introdução ao Linux</div>
+                <div class="degree lang-en">Additional course: Introduction to Linux</div>
+                <div class="org"><span class="status lang-pt">certificado</span><span class="status lang-en">certified</span></div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2 class="lang-pt">Projetos em Destaque</h2>
+            <h2 class="lang-en">Featured Projects</h2>
+            <div class="project-tags">
+                <a href="https://github.com/felipebherve/techtinga-api" target="_blank">
+                    <strong>techtinga-api</strong>
+                    <span class="lang-pt">API REST de projetos e tarefas (desafio final)</span>
+                    <span class="lang-en">Projects &amp; tasks REST API (final challenge)</span>
+                </a>
+                <a href="https://github.com/felipebherve/django-ifrs-estudos" target="_blank">
+                    <strong>django-ifrs-estudos</strong>
+                    <span class="lang-pt">Curso de backend completo, 4 projetos Django</span>
+                    <span class="lang-en">Full backend course, 4 Django projects</span>
+                </a>
+                <a href="https://github.com/felipebherve/javascript-udemy-estudos" target="_blank">
+                    <strong>javascript-udemy-estudos</strong>
+                    <span class="lang-pt">Fundamentos de JavaScript</span>
+                    <span class="lang-en">JavaScript fundamentals</span>
+                </a>
+                <a href="https://github.com/felipebherve/calculadora-salario-liquido" target="_blank">
+                    <strong>calculadora-salario-liquido</strong>
+                    <span class="lang-pt">Cálculo de INSS e IRRF</span>
+                    <span class="lang-en">Brazilian payroll tax calculator</span>
+                </a>
+            </div>
+            <p style="margin-top:10px;">
+                <a href="https://github.com/felipebherve" target="_blank">
+                    <span class="lang-pt">→ ver todos no GitHub</span><span class="lang-en">→ see all on GitHub</span>
+                </a>
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2 class="lang-pt">Conhecimentos Técnicos</h2>
+            <h2 class="lang-en">Technical Skills</h2>
+
+            <p class="tag-label lang-pt">Desenvolvimento</p>
+            <p class="tag-label lang-en">Development</p>
+            <ul class="tags">
+                <li>Python</li>
+                <li>Django</li>
+                <li>Django REST Framework</li>
+                <li>JavaScript</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Java</li>
+                <li>Git &amp; GitHub</li>
+                <li>SQLite</li>
+            </ul>
+
+            <p class="tag-label lang-pt">Financeiro e administrativo</p>
+            <p class="tag-label lang-en">Finance &amp; administrative</p>
+            <ul class="tags">
+                <li class="lang-pt">Excel e Pacote Office</li>
+                <li class="lang-en">Excel and Microsoft Office</li>
+                <li>Conexos</li>
+                <li>Sage Folhamatic</li>
+                <li>Domínio</li>
+                <li>Conta Azul</li>
+            </ul>
+        </section>
+
+        <section id="experiencia">
+            <h2 class="lang-pt">Experiência Profissional</h2>
+            <h2 class="lang-en">Professional Experience</h2>
+
+            <div class="job">
+                <p class="role"><a href="http://seger.com.br/nsite/" target="_blank">Seger Comercial Importadora e Exportadora S.A.</a></p>
+                <span class="period lang-pt">Auxiliar Financeiro Pleno · Setembro 2016 – Fevereiro 2019 · Florianópolis/SC</span>
+                <span class="period lang-en">Mid-Level Financial Assistant · September 2016 – February 2019 · Florianópolis, Brazil</span>
+                <ul class="lang-pt">
+                    <li>Contas a pagar e receber, conciliação bancária e contábil.</li>
+                    <li>Emissão e conferência de documentos fiscais, folha de pagamento, fluxo de caixa e relatórios.</li>
+                    <li>Liderei sozinho a migração completa do sistema financeiro (Sage Finmatic/Folhamatic) para o Conexos, incluindo cadastro e conferência de contas, clientes e fornecedores.</li>
+                    <li>Progressão interna: iniciei como estagiário, fui efetivado e cheguei a Auxiliar Financeiro Pleno.</li>
                 </ul>
-            </li>
-
-            <li>
-
-                <b><a href="https://www.institutodocorretor.com.br/?gclid=Cj0KCQjwhsmaBhCvARIsAIbEbH4mX3yafGClvjynK8vW4Vuq7-HqvNQK1XSHv4ke8DKkkU_Fm0E-uHAaAhhwEALw_wcB" target="blank">CETER – Centro de Educação Tecnológica República | São José/Florianópolis, Brasil </a></b>
-                <ul>
-                    <b><i><sup>Auxiliar de cobrança | Maio 2016 – Setembro 2016</sup></i></b>
-                    <li>Atendimento ao cliente e efetuação de cobranças.</li>
-                    <li>Identifiquei e corrigi inconsistências na cobrança deixadas pela gestão anterior, organizando um controle completo de valores e parcelas em planilha.</li>
-                    <li>Verificação de balancetes e balanços, checagem de relatórios.</li>
+                <ul class="lang-en">
+                    <li>Accounts payable and receivable, bank and accounting reconciliation.</li>
+                    <li>Issued and checked fiscal documents, payroll, cash flow and reports.</li>
+                    <li>Led the full migration of the financial system (Sage Finmatic/Folhamatic) to Conexos on my own, including accounts, clients and suppliers.</li>
+                    <li>Internal progression: started as an intern, was hired, and reached Mid-Level Financial Assistant.</li>
                 </ul>
-            </li>
+            </div>
 
+            <div class="job">
+                <p class="role"><a href="https://www.institutodocorretor.com.br/" target="_blank">CETER – Centro de Educação Tecnológica República</a></p>
+                <span class="period lang-pt">Auxiliar de Cobrança · Maio 2016 – Setembro 2016 · São José/Florianópolis, Brasil</span>
+                <span class="period lang-en">Collections Assistant · May 2016 – September 2016 · São José/Florianópolis, Brazil</span>
+                <ul class="lang-pt">
+                    <li>Atendimento ao cliente, cobrança por telefone e presencial, negociação de valores.</li>
+                    <li>Identifiquei inconsistências no controle de cheques deixadas pela gestão anterior e liderei a auditoria: digitalização e catalogação de cerca de 5.000 títulos.</li>
+                    <li>Criei uma planilha de controle de valores, parcelas e saldo em cofre; verificação de balancetes e balanços.</li>
+                </ul>
+                <ul class="lang-en">
+                    <li>Customer service, collections by phone and in person, negotiating amounts.</li>
+                    <li>Found inconsistencies in the check-tracking system left by the previous management and led the audit: digitized and cataloged around 5,000 checks.</li>
+                    <li>Built a spreadsheet to control amounts, installments and cash-on-hand; checked trial balances and balance sheets.</li>
+                </ul>
+            </div>
 
-        </ul>
-        <p class="texto">Também atuei anteriormente em atendimento e operações (temakeria, restaurante japonês,
-            almoxarifado), onde desenvolvi organização, controle de estoque e atendimento ao cliente.</p>
+            <p class="tag-label lang-pt" style="margin-top:20px;">Experiência adicional</p>
+            <p class="tag-label lang-en" style="margin-top:20px;">Additional experience</p>
+
+            <div class="more-experience">
+                <div class="row">
+                    <span class="who"><b>Moreira Mendes Consultoria e Contabilidade</b> —
+                        <span class="lang-pt">estágio de contabilidade</span><span class="lang-en">accounting internship</span></span>
+                    <span class="when lang-pt">abr–mai/2019</span><span class="when lang-en">Apr–May 2019</span>
+                </div>
+                <div class="row">
+                    <span class="who"><b>Inovação Contabilidade e Treinamento</b> —
+                        <span class="lang-pt">Auxiliar Contábil I</span><span class="lang-en">Accounting Assistant I</span></span>
+                    <span class="when lang-pt">fev–abr/2016</span><span class="when lang-en">Feb–Apr 2016</span>
+                    <span class="what lang-pt">Regularização de empresas em atraso no sistema Domínio, elaboração de balanços, formatação de máquinas e cadastro de contas e clientes.</span>
+                    <span class="what lang-en">Updated overdue companies' records in the Domínio system, prepared balance sheets, set up computers and registered accounts and clients.</span>
+                </div>
+                <div class="row">
+                    <span class="who"><b>Bordin Empreendimentos e Participações</b> —
+                        <span class="lang-pt">estágio administrativo / almoxarifado</span><span class="lang-en">administrative / warehouse intern</span></span>
+                    <span class="when lang-pt">set/2015–fev/2016</span><span class="when lang-en">Sep 2015–Feb 2016</span>
+                    <span class="what lang-pt">Controle de estoque, bens patrimoniais e depreciação, lançamento de pedidos e cadastro de produtos.</span>
+                    <span class="what lang-en">Inventory and asset control (including depreciation), order entry and product records.</span>
+                </div>
+                <div class="row">
+                    <span class="who"><b>TMK Fast Food</b> (MakisPlace) —
+                        <span class="lang-pt">Auxiliar de Escritório</span><span class="lang-en">Office Assistant</span></span>
+                    <span class="when lang-pt">jun/2015</span><span class="when lang-en">Jun 2015</span>
+                </div>
+                <div class="row">
+                    <span class="who"><b>Restaurante Ronin</b> —
+                        <span class="lang-pt">Auxiliar de Sushiman</span><span class="lang-en">Sushi Assistant</span></span>
+                    <span class="when lang-pt">jun–nov/2014</span><span class="when lang-en">Jun–Nov 2014</span>
+                    <span class="what lang-pt">Operação de cozinha e conservação de alimentos.</span>
+                    <span class="what lang-en">Kitchen operation and food preservation.</span>
+                </div>
+                <div class="row">
+                    <span class="who"><b>TMK Fast Food</b> (MakisPlace) —
+                        <span class="lang-pt">Atendente; função de gerência informal nos últimos meses</span><span class="lang-en">Attendant; informal shift-lead in the final months</span></span>
+                    <span class="when lang-pt">nov/2013–jun/2014</span><span class="when lang-en">Nov 2013–Jun 2014</span>
+                </div>
+                <div class="row">
+                    <span class="who"><b>Camargo Lobo Locadora</b> (Videoteca) —
+                        <span class="lang-pt">Folguista</span><span class="lang-en">Store Clerk (relief shifts)</span></span>
+                    <span class="when lang-pt">jul–out/2013</span><span class="when lang-en">Jul–Oct 2013</span>
+                </div>
+            </div>
+
+            <p class="tag-label lang-pt" style="margin-top:20px;">Renda complementar</p>
+            <p class="tag-label lang-en" style="margin-top:20px;">Additional income</p>
+            <p class="texto lang-pt" style="font-size:14px;">Motorista/entregador parceiro autônomo (Uber e apps
+                de entrega), 2020–2026, intercalado com os estudos. Atendimento ao público e gestão autônoma da
+                rotina; encerrado em julho de 2026 para dedicação integral aos estudos e à busca por uma posição
+                na área.</p>
+            <p class="texto lang-en" style="font-size:14px;">Self-employed driver/courier (Uber and delivery
+                apps), 2020–2026, interspersed with my studies. Customer service and self-managed schedule;
+                wrapped up in July 2026 to focus fully on my studies and the job search.</p>
+        </section>
+
+        <section id="comportamental">
+            <h2 class="lang-pt">Competências Comportamentais</h2>
+            <h2 class="lang-en">Soft Skills</h2>
+            <ul class="tags lang-pt">
+                <li>Organização</li>
+                <li>Proatividade</li>
+                <li>Raciocínio analítico</li>
+                <li>Facilidade de aprendizado</li>
+                <li>Resolução de problemas</li>
+                <li>Atenção aos detalhes</li>
+                <li>Comunicação clara</li>
+            </ul>
+            <ul class="tags lang-en">
+                <li>Organization</li>
+                <li>Proactivity</li>
+                <li>Analytical thinking</li>
+                <li>Fast learner</li>
+                <li>Problem-solving</li>
+                <li>Attention to detail</li>
+                <li>Clear communication</li>
+            </ul>
+        </section>
+
+        <section id="idiomas">
+            <h2 class="lang-pt">Idiomas</h2>
+            <h2 class="lang-en">Languages</h2>
+            <ul class="tags">
+                <li class="lang-pt">Português (nativo)</li>
+                <li class="lang-en">Portuguese (native)</li>
+                <li class="lang-pt">Inglês (B1)</li>
+                <li class="lang-en">English (B1)</li>
+            </ul>
+        </section>
 
     </div>
-    <div class="lang-en">
-        <h3><b>Experience</b></h3>
-        <ul>
-
-            <li>
-                <b><a href="http://seger.com.br/nsite/" target="blank">Seger Importadora Exportadora S.A.</a>: </b> <br>
-                <i><b><sup> Mid-Level Financial Assistant | September 2016 – February 2019</sup></b></i>
-                <ul>
-                 <li>Full financial routine: bank reconciliation, accounts payable/receivable, invoicing and documentation.</li>
-                 <li>Led the migration of the financial system (Sage Finmatic/Folhamatic) to Conexos on my own, including accounts, records and automations.</li>
-                 <li>Debt and outstanding-balance reports, banking management.</li>
-                 <li>Internal progression: started as an intern, was hired, and reached Mid-Level Financial Assistant.</li>
-                </ul>
-            </li>
-
-            <li>
-
-                <b><a href="https://www.institutodocorretor.com.br/?gclid=Cj0KCQjwhsmaBhCvARIsAIbEbH4mX3yafGClvjynK8vW4Vuq7-HqvNQK1XSHv4ke8DKkkU_Fm0E-uHAaAhhwEALw_wcB" target="blank">CETER – Centro de Educação Tecnológica República | São José/Florianópolis, Brazil </a></b>
-                <ul>
-                    <b><i><sup>Collections Assistant | May 2016 – September 2016</sup></i></b>
-                    <li>Customer service and collections.</li>
-                    <li>Found and fixed collection inconsistencies left by the previous management, building a full spreadsheet control of amounts and installments.</li>
-                    <li>Checked trial balances, balance sheets and reports.</li>
-                </ul>
-            </li>
-
-
-        </ul>
-        <p class="texto">I also worked earlier in customer service and operations (a temaki restaurant, a Japanese
-            restaurant, a warehouse), where I built skills in organization, inventory control and customer
-            service.</p>
-
-    </div>
-
 </body>
 </html>

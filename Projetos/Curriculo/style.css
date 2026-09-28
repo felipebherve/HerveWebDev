@@ -1,102 +1,337 @@
-body{margin: 20px; }
-
-h1{
-    background: linear-gradient(to right, black, white , 20%, black);
-    color: white;
-    border: 0ch;
-    border-radius:20px;
-    padding: 20px;
-    margin:0px 0px 5px 0px;
-    text-align: center;
-
-    text-shadow: 2px 4px 10px white;
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ tokens (mesma paleta do portfólio) */
+:root {
+    --bg: #0a0e14;
+    --surface: #111826;
+    --surface-border: #1f2937;
+    --text: #e6e9ef;
+    --text-muted: #9aa4b2;
+    --accent: #2dd4bf;
+    --accent-soft: rgba(45, 212, 191, 0.12);
+    --accent-border: rgba(45, 212, 191, 0.35);
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
 }
 
-.texto{
-    text-align:justify;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    font-family: "Source Serif Pro", monospace, Arial, Helvetica, sans-serif;
+body {
+    margin: 0;
+    padding: 24px 20px 60px;
+    background-color: var(--bg);
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.045) 1px, transparent 0);
+    background-size: 26px 26px;
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
-.lista1{
-    
+.page {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+a {
+    color: var(--accent);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--surface-border);
+    margin: 20px 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ topo / voltar ao portfólio */
+
+.back-link {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ cabeçalho */
+
+h1 {
+    font-size: clamp(30px, 5vw, 40px);
+    margin: 0 0 4px;
+    background: none;
+    color: var(--text);
+    text-align: left;
+    padding: 0;
+    border-radius: 0;
+    text-shadow: none;
+}
+
+.tagline {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    font-size: 15px;
+    margin: 0 0 18px;
+}
+
+/* botões de contato — mesma estrutura de antes (lista1/botao1/link1), novo visual */
+.lista1 {
     list-style-type: none;
-    margin: 10px 0px;
-    padding: 0px 0px;
+    margin: 0 0 6px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.botao1{
-    /* color: white;
-    border: 1px solid;
-    border-radius: 10px 35px 10px 35px;
-    padding: 0px 10px 0px 10px;
-    margin: 0px;
-    background: linear-gradient(to right, black, black); */
-    display:inline;
-    margin: 30px 0px 20px 0px;
-} 
+.botao1 {
+    display: inline-block;
+    margin: 0;
+}
 
-.link1{
-    color: white;
-    text-shadow: 2px 4px 30px white;
-    text-decoration:none;
+.link1 {
+    display: inline-block;
+    color: var(--text);
+    text-decoration: none;
     text-align: center;
-    border: 1px solid;
-    border-color: black;
-    border-radius: 10px 35px 10px 35px;
-    padding: 0px 10px 0px 10px;
-    margin: 20px 0px;
-    background:black;
-    display:inline;
-    
-    
-   
-    
+    border: 1px solid var(--surface-border);
+    background: var(--surface);
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-family: var(--font-mono);
+    cursor: pointer;
 }
 
-
-.link1:visited{
-    background-color: white;
-    /* border: 1px solid; */
-    border-color: black;
-    /* border-radius: 10px 35px 10px 35px;
-    padding: 0px 10px 0px 10px;
-    margin: 0px;
-    display:inline; */
-
-    color: black;
-    text-shadow: 2px 4px 10px black;
-    /* text-decoration:solid;
-    text-align: center; */
-
+.link1:visited {
+    color: var(--text);
 }
 
-.link1:hover{
-    padding: 5px 15px 5px 15px;
+.link1:hover {
+    border-color: var(--accent-border);
+    background: var(--accent-soft);
+    color: var(--accent);
+    text-decoration: none;
 }
 
-.link1:active{
-    background-color: grey;
-    color: white;
+.link1:active {
+    background: var(--accent-soft);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ seções */
+
+section {
+    margin: 28px 0;
+}
+
+h2 {
+    font-size: 13px;
+    font-family: var(--font-mono);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--surface-border);
+    padding-bottom: 8px;
+    margin: 0 0 16px;
+}
+
+.texto {
+    text-align: left;
+    color: var(--text-muted);
+    max-width: 680px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ tags (habilidades, comportamental, idiomas) */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0 0 14px;
+    padding: 0;
+}
+
+.tags li {
+    border: 1px solid var(--surface-border);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 13px;
+    padding: 5px 12px;
+    border-radius: 100px;
+}
+
+.tag-label {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    margin: 0 0 8px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ projetos */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-tags a {
+    display: block;
+    border: 1px solid var(--surface-border);
+    background: var(--surface);
+    border-radius: 10px;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 13px;
+    flex: 1 1 200px;
+}
+
+.project-tags a:hover {
+    border-color: var(--accent-border);
+    background: var(--accent-soft);
+}
+
+.project-tags strong {
+    display: block;
+    font-family: var(--font-mono);
+    color: var(--accent);
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.project-tags span {
+    color: var(--text-muted);
+    font-size: 12.5px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ experiência */
+
+.job {
+    margin-bottom: 22px;
+}
+
+.job .role {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0;
+}
+
+.job .org {
+    color: var(--text);
+}
+
+.job .period {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--accent);
+    display: block;
+    margin: 3px 0 8px;
+}
+
+.job ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.job li {
+    margin-bottom: 3px;
+}
+
+.more-experience {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.more-experience .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px;
+    border-bottom: 1px dashed var(--surface-border);
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.more-experience .row .who {
+    color: var(--text);
+}
+
+.more-experience .row .who b {
+    color: var(--text);
+}
+
+.more-experience .row .when {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.more-experience .row .what {
+    flex-basis: 100%;
+    color: var(--text-muted);
+    font-size: 13.5px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ educação */
+
+.edu-item {
+    margin-bottom: 12px;
+}
+
+.edu-item .degree {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.edu-item .org {
+    color: var(--text-muted);
+    font-size: 13.5px;
+}
+
+.edu-item .status {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent);
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ idioma (EN/PT) */
 
-.lang-pt{
+.lang-pt {
     display: none;
 }
 
-html[data-lang="pt"] .lang-en{
+html[data-lang="pt"] .lang-en {
     display: none;
 }
 
-html[data-lang="pt"] .lang-pt{
+html[data-lang="pt"] .lang-pt {
     display: revert;
 }
 
-.lang-toggle-btn{
+.lang-toggle-btn {
     font: inherit;
     cursor: pointer;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ print */
+
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .back-link,
+    .lang-toggle-btn {
+        display: none;
+    }
 }
